@@ -1,21 +1,21 @@
  <!--This is the Login View-->
-<div *ngf="displayLogin">
+<div *ngIf="displayLogin">
 <h2>Login</h2>
 <form action="/action_page.php">
   Username<br>
-  <input type="text" name="firstname" value="Mickey">
+  <input #username type="text" name="firstname" value="Mickey">
   <br>
  Password<br>
-  <input type="text" name="lastname" value="Mouse">
+  <input type="text" #password name="lastname" value="Mouse">
   <br><br>
   <button type="button" value="Submit" (click)="print()">Login</button>
-  <button type="button" value="Submit" (click)="print()">Register</button>
+  <button type="button" value="Submit" (click)="singUp()">Register</button>
 </form> 
 </div>
  <!-- End-->
 
  <!--This is the Admins Home View-->
- <div *ngf="displayRegister" >
+ <div *ngIf="displayRegister" >
   <form>
       Start-Time: <input #startTime type="text" name="fname"><br>
       End-Time: <input #endTime type="text" name="lname"><br>
@@ -26,7 +26,7 @@
 
 
 <!--This is the Login View-->
-<div *ngf="displayUserHome" >
+<div *ngIf="displayUserHome" >
 <form>
     Start-Time: <input #startTime type="text" name="fname"><br>
     End-Time: <input #endTime type="text" name="lname"><br>
@@ -36,7 +36,7 @@
  <!-- End-->
 
 <!--This is the Users Home View-->
-<div *ngf="displayAdminHome" >
+<div *ngIf="displayAdminHome" >
   <form>
       Start-Time: <input #startTime type="text" name="fname"><br>
       End-Time: <input #endTime type="text" name="lname"><br>
